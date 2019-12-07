@@ -3,6 +3,7 @@ package br.com.siecola.aws_project01.service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.amazonaws.services.sns.AmazonSNS;
+import org.springframework.stereotype.Service;
 import com.amazonaws.services.sns.model.Topic;
 import br.com.siecola.aws_project01.model.Product;
 import br.com.siecola.aws_project01.model.Envelope;
@@ -11,9 +12,9 @@ import br.com.siecola.aws_project01.enums.EventType;
 import com.amazonaws.services.sns.model.PublishResult;
 import br.com.siecola.aws_project01.model.ProductEvent;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
+@Service
 public class ProductPublisher {
     private static final Logger log = LoggerFactory.getLogger(
             ProductPublisher.class);
@@ -21,7 +22,6 @@ public class ProductPublisher {
     private Topic productEventsTopic;
     private ObjectMapper objectMapper;
 
-    @Autowired
     public ProductPublisher(AmazonSNS snsClient,
                             @Qualifier("productEventsTopic") Topic productEventsTopic,
                             ObjectMapper objectMapper) {
