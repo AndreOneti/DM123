@@ -45,7 +45,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Name4\",\n    \"model\": \"MOD4\",\n    \"code\": \"COD4\",\n    \"price\": 40\n}",
+							"raw": "{\n    \"name\": \"Name9\",\n    \"model\": \"MOD9\",\n    \"code\": \"COD9\",\n    \"price\": 90\n}",
 							"options": {
 								"raw": {
 									"language": "json"
