@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "3c56ed09-cb21-4499-8f71-c33f251b2c40",
+		"name": "DM123-Andre",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Get all Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "cluster-01-lb-460495094.us-east-1.elb.amazonaws.com:8080/api/products",
+							"host": [
+								"cluster-01-lb-460495094",
+								"us-east-1",
+								"elb",
+								"amazonaws",
+								"com"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new Products",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Name4\",\n    \"model\": \"MOD4\",\n    \"code\": \"COD4\",\n    \"price\": 40\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "cluster-01-lb-460495094.us-east-1.elb.amazonaws.com:8080/api/products",
+							"host": [
+								"cluster-01-lb-460495094",
+								"us-east-1",
+								"elb",
+								"amazonaws",
+								"com"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Test",
+			"item": [
+				{
+					"name": "Test Get Route - Is Matilde",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "cluster-01-lb-460495094.us-east-1.elb.amazonaws.com:8080/api/test/dogcolor/matilde",
+							"host": [
+								"cluster-01-lb-460495094",
+								"us-east-1",
+								"elb",
+								"amazonaws",
+								"com"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"test",
+								"dogcolor",
+								"matilde"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test Get Route - Return Dog Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "cluster-01-lb-460495094.us-east-1.elb.amazonaws.com:8080/api/test/dog/matilde",
+							"host": [
+								"cluster-01-lb-460495094",
+								"us-east-1",
+								"elb",
+								"amazonaws",
+								"com"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"test",
+								"dog",
+								"matilde"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
