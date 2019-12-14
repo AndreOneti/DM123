@@ -45,7 +45,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Name12\",\n    \"model\": \"MOD12\",\n    \"code\": \"COD12\",\n    \"price\": 120\n}",
+							"raw": "{\n    \"name\": \"Name14\",\n    \"model\": \"MOD14\",\n    \"code\": \"COD14\",\n    \"price\": 140\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -65,6 +65,46 @@
 							"path": [
 								"api",
 								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit a Product",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Name1-2\",\n    \"model\": \"MOD1-2\",\n    \"code\": \"COD1-2\",\n    \"price\": 1.33\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "cluster-01-lb-460495094.us-east-1.elb.amazonaws.com:8080/api/products/1",
+							"host": [
+								"cluster-01-lb-460495094",
+								"us-east-1",
+								"elb",
+								"amazonaws",
+								"com"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								"1"
 							]
 						}
 					},
@@ -121,6 +161,59 @@
 								"test",
 								"dog",
 								"matilde"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Events",
+			"item": [
+				{
+					"name": "Get All  events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "cluster-01-lb2-1486635160.us-east-1.elb.amazonaws.com:9090/api/events",
+							"host": [
+								"cluster-01-lb2-1486635160",
+								"us-east-1",
+								"elb",
+								"amazonaws",
+								"com"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All  events by User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "cluster-01-lb2-1486635160.us-east-1.elb.amazonaws.com:9090/api/events/doralice",
+							"host": [
+								"cluster-01-lb2-1486635160",
+								"us-east-1",
+								"elb",
+								"amazonaws",
+								"com"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"events",
+								"doralice"
 							]
 						}
 					},
