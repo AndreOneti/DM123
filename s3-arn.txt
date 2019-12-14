@@ -1,1 +1,13 @@
 arn:aws:s3:::aloc-invoice
+
+"Condition": {
+  "StringEquals": {
+    "AWS:SourceOwner": "354249400796"
+  }
+}
+
+"Condition": {
+  "ArnEquals": {
+    "aws:SourceArn": "arn:aws:s3:::aloc-invoice"
+  }
+}
