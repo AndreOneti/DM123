@@ -22,7 +22,7 @@ public class ProductController {
     @Autowired
     public ProductController(ProductRepository productRepositoryy,
                              ProductPublisher productPublisher) {
-        this.productRepository = productRepository;
+        this.productRepository = productRepositoryy;
         this.productPublisher = productPublisher;
     }
 
