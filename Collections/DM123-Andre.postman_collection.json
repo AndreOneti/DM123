@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "3c56ed09-cb21-4499-8f71-c33f251b2c40",
+		"_postman_id": "f7a419d8-f256-4fee-9428-6f483f68f9bd",
 		"name": "DM123-Andre",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -45,7 +45,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Name9\",\n    \"model\": \"MOD9\",\n    \"code\": \"COD9\",\n    \"price\": 90\n}",
+							"raw": "{\n    \"name\": \"Name10\",\n    \"model\": \"MOD10\",\n    \"code\": \"COD10\",\n    \"price\": 100\n}",
 							"options": {
 								"raw": {
 									"language": "json"
