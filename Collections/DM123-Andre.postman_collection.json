@@ -45,7 +45,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Name10\",\n    \"model\": \"MOD10\",\n    \"code\": \"COD10\",\n    \"price\": 100\n}",
+							"raw": "{\n    \"name\": \"Name12\",\n    \"model\": \"MOD12\",\n    \"code\": \"COD12\",\n    \"price\": 120\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -128,6 +128,48 @@
 				}
 			],
 			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Health Check",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Name11\",\n    \"model\": \"MOD11\",\n    \"code\": \"COD11\",\n    \"price\": 110\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "cluster-01-lb-460495094.us-east-1.elb.amazonaws.com:8080/actuator/health",
+					"host": [
+						"cluster-01-lb-460495094",
+						"us-east-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"health"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"protocolProfileBehavior": {}
