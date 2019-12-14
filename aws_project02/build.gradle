@@ -45,7 +45,7 @@ dependencies {
 
 bootJar {
     baseName = 'aws_project02'
-    version = '0.1.0'
+    version = '0.2.0'
 }
 
 task unpack(type: Copy) {
