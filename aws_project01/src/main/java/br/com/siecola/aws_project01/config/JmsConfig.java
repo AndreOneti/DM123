@@ -1,18 +1,18 @@
-package br.com.siecola.aws_project02.config;
+package br.com.siecola.aws_project01.config;
+
+import com.amazon.sqs.javamessaging.ProviderConfiguration;
+import com.amazon.sqs.javamessaging.SQSConnectionFactory;
+import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
+import com.amazonaws.services.sqs.AmazonSQSClientBuilder;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.jms.annotation.EnableJms;
+import org.springframework.jms.config.DefaultJmsListenerContainerFactory;
+import org.springframework.jms.core.JmsTemplate;
+import org.springframework.jms.support.destination.DynamicDestinationResolver;
 
 import javax.jms.Session;
-
-import org.springframework.jms.core.JmsTemplate;
-import org.springframework.context.annotation.Bean;
-import org.springframework.jms.annotation.EnableJms;
-import com.amazonaws.services.sqs.AmazonSQSClientBuilder;
-import com.amazon.sqs.javamessaging.SQSConnectionFactory;
-import org.springframework.beans.factory.annotation.Value;
-import com.amazon.sqs.javamessaging.ProviderConfiguration;
-import org.springframework.context.annotation.Configuration;
-import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
-import org.springframework.jms.config.DefaultJmsListenerContainerFactory;
-import org.springframework.jms.support.destination.DynamicDestinationResolver;
 
 @Configuration
 @EnableJms
