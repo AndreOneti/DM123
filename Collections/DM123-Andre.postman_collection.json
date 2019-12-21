@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "f7a419d8-f256-4fee-9428-6f483f68f9bd",
+		"_postman_id": "8150307e-85e4-4a87-975c-166474bd7233",
 		"name": "DM123-Andre",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -216,6 +216,127 @@
 								"doralice"
 							]
 						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Invoices",
+			"item": [
+				{
+					"name": "Get Invoices",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "cluster-01-lb-460495094.us-east-1.elb.amazonaws.com:8080/api/invoices",
+							"host": [
+								"cluster-01-lb-460495094",
+								"us-east-1",
+								"elb",
+								"amazonaws",
+								"com"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"invoices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Request register url",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/plain",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "cluster-01-lb-460495094.us-east-1.elb.amazonaws.com:8080/api/invoices",
+							"host": [
+								"cluster-01-lb-460495094",
+								"us-east-1",
+								"elb",
+								"amazonaws",
+								"com"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"invoices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send FileExample",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "file",
+							"file": {
+								"src": "/C:/Users/alunopos/Desktop/DM123/invoiceTest.txt"
+							}
+						},
+						"url": {
+							"raw": "https://aloc-invoice.s3.amazonaws.com/602e8078-23a7-4ecd-bd64-97bbd55f7060?x-amz-meta-process-id=602e8078-23a7-4ecd-bd64-97bbd55f7060&X-Amz-Security-Token=FwoGZXIvYXdzEKj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDKaRxleSHY2cmwSyBSLfAhSIPdQMNScC1RiyI32GUJkqW899x0vx0Dcy5GooBn%2FazRg6z0EpDPrd%2FyOTtl4qpbMExIjrAJF8GDqUjmCX1SERgg8Bi8q%2F8VypUHhSc9Fz4R3HA48gdMm%2BPtAUPuStT4cCE3yf1kJN2HzUh6%2BqURTMU%2B3S2cg0dktP%2F7dUIfQZccjscLD%2FfzWjfDUgSDs3KGF9aBLJjEscMGNOoX1wgEQ9MuLfSKP6x%2FTFfPp9F2ZcQeTnExvrfIqq8aeGw2uQEiCx%2FytObocIuFtel1fWbjrSa6%2Fa9MiVqGcrkE045%2B36HZ8e%2FhNqmEn7o8wkxfirGrxACoIILB9jvjDY1hy97Tu6ZpT%2FhQn6NPntOMB8DvVNHElXevI0wVr5IYWTJqdZaqE%2FOuP9TcVxBKEA2ZRx1WdkcYu0r6Rj3i2jfyOxoMt6v5FxvtmciI38MJr%2B79rjodX%2Fiq3x6TtaaWUQh5DHmyj10PjvBTKjAZp9sH8VHRrZOXesSJr8YHSZpWk7p7KjDwYoFw1O5N4iW0egWKrOV0pX4BQPqp00Ds2y22tc2OE4nQGjANw9gBlc3KHTul28X2Ocg7EOcu0z5TvrKHfhCHjaiK9gPSvQbWOKNszBszOtIo6T0EqoooO2Bd%2FfjocCeBlizwuAihVvzgArIls3FW8lx5%2BUXE3L6LMZDoGW7vJe9QcqWVUvxtzLQTY%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191221T142143Z&X-Amz-SignedHeaders=host&X-Amz-Expires=299&X-Amz-Credential=ASIAVE6XI4HOI5SE7Z24%2F20191221%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=399e64f8b4e7a5349b4a52b9b9063690a9028d862ac8c0b83d4c85308fc4b3b3",
+							"protocol": "https",
+							"host": [
+								"aloc-invoice",
+								"s3",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"602e8078-23a7-4ecd-bd64-97bbd55f7060"
+							],
+							"query": [
+								{
+									"key": "x-amz-meta-process-id",
+									"value": "602e8078-23a7-4ecd-bd64-97bbd55f7060"
+								},
+								{
+									"key": "X-Amz-Security-Token",
+									"value": "FwoGZXIvYXdzEKj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDKaRxleSHY2cmwSyBSLfAhSIPdQMNScC1RiyI32GUJkqW899x0vx0Dcy5GooBn%2FazRg6z0EpDPrd%2FyOTtl4qpbMExIjrAJF8GDqUjmCX1SERgg8Bi8q%2F8VypUHhSc9Fz4R3HA48gdMm%2BPtAUPuStT4cCE3yf1kJN2HzUh6%2BqURTMU%2B3S2cg0dktP%2F7dUIfQZccjscLD%2FfzWjfDUgSDs3KGF9aBLJjEscMGNOoX1wgEQ9MuLfSKP6x%2FTFfPp9F2ZcQeTnExvrfIqq8aeGw2uQEiCx%2FytObocIuFtel1fWbjrSa6%2Fa9MiVqGcrkE045%2B36HZ8e%2FhNqmEn7o8wkxfirGrxACoIILB9jvjDY1hy97Tu6ZpT%2FhQn6NPntOMB8DvVNHElXevI0wVr5IYWTJqdZaqE%2FOuP9TcVxBKEA2ZRx1WdkcYu0r6Rj3i2jfyOxoMt6v5FxvtmciI38MJr%2B79rjodX%2Fiq3x6TtaaWUQh5DHmyj10PjvBTKjAZp9sH8VHRrZOXesSJr8YHSZpWk7p7KjDwYoFw1O5N4iW0egWKrOV0pX4BQPqp00Ds2y22tc2OE4nQGjANw9gBlc3KHTul28X2Ocg7EOcu0z5TvrKHfhCHjaiK9gPSvQbWOKNszBszOtIo6T0EqoooO2Bd%2FfjocCeBlizwuAihVvzgArIls3FW8lx5%2BUXE3L6LMZDoGW7vJe9QcqWVUvxtzLQTY%3D"
+								},
+								{
+									"key": "X-Amz-Algorithm",
+									"value": "AWS4-HMAC-SHA256"
+								},
+								{
+									"key": "X-Amz-Date",
+									"value": "20191221T142143Z"
+								},
+								{
+									"key": "X-Amz-SignedHeaders",
+									"value": "host"
+								},
+								{
+									"key": "X-Amz-Expires",
+									"value": "299"
+								},
+								{
+									"key": "X-Amz-Credential",
+									"value": "ASIAVE6XI4HOI5SE7Z24%2F20191221%2Fus-east-1%2Fs3%2Faws4_request"
+								},
+								{
+									"key": "X-Amz-Signature",
+									"value": "399e64f8b4e7a5349b4a52b9b9063690a9028d862ac8c0b83d4c85308fc4b3b3"
+								}
+							]
+						},
+						"description": "Before use this method, you need use Request register url to recieve an valid url.\n\nUse the url with put method and select the file.\n\nAnd voiala.\n\nThe file has saved now."
 					},
 					"response": []
 				}

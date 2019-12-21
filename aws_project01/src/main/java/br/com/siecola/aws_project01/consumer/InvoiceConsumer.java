@@ -34,8 +34,7 @@ public class InvoiceConsumer {
     }
 
     @JmsListener(destination = "${aws.sqs.queue.invoice.events.name}")
-    public void receiveS3Event(TextMessage textMessage)
-            throws JMSException, IOException {
+    public void receiveS3Event(TextMessage textMessage) throws JMSException, IOException {
         SnsMessage snsMessage = objectMapper.readValue(textMessage.getText(), SnsMessage.class);
         S3EventNotification s3EventNotification = objectMapper.readValue(snsMessage.getMessage(),
                 S3EventNotification.class);
