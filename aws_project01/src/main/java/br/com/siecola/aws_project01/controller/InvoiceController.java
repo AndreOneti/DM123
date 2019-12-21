@@ -1,5 +1,6 @@
 package br.com.siecola.aws_project01.controller;
 
+import br.com.siecola.aws_project01.model.Invoice;
 import com.amazonaws.HttpMethod;
 import com.amazonaws.services.s3.Headers;
 import com.amazonaws.services.s3.AmazonS3;
@@ -7,10 +8,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import br.com.siecola.aws_project01.model.UrlResponse;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 import br.com.siecola.aws_project01.repository.InvoiceRepository;
 import com.amazonaws.services.s3.model.GeneratePresignedUrlRequest;
 
@@ -46,5 +45,15 @@ public class InvoiceController {
         urlResponse.setExpirationTime(expirationTime.getEpochSecond());
         urlResponse.setUrl(amazonS3.generatePresignedUrl(generatePresignedUrlRequest).toString());
         return new ResponseEntity<UrlResponse>(urlResponse, HttpStatus.OK);
+    }
+
+    @GetMapping
+    public Iterable<Invoice> findAll() {
+        return invoiceRepository.findAll();
+    }
+
+    @GetMapping(path = "/bycustomername")
+    public Iterable<Invoice> findByCustomerName(@RequestParam String customerName) {
+        return invoiceRepository.findAllByCustomerName(customerName);
     }
 }
