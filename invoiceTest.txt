@@ -1,7 +1,7 @@
 {
-    "invoiceNumber": "ABCD-1234",
-    "customerName": "Matilde",
-    "totalValue": 1250,
-    "productId": 1,
-    "quantity": 2
+    "invoiceNumber": "TesteFinal",
+    "customerName": "Juditi",
+    "totalValue": 1555,
+    "productId": 721,
+    "quantity": 50
 }
